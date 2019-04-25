@@ -77,7 +77,7 @@ class Bingo2App(App):
         print("trying to connect")
         self.cli.on_connect = self.on_connect
         self.cli.on_message = self.on_message
-        self.cli.connect('192.168.0.100', port=1883, keepalive=60)
+        self.cli.connect('test.mosquitto.org', port=1883, keepalive=60)
         self.cli.loop_start()
 
     def on_connect(self, client, userdata, flags, respons_code):
