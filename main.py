@@ -3,7 +3,7 @@ from kivy.uix.widget import Widget
 from kivy.clock import Clock
 from kivy.app import App
 
-class BingoMain(Widget):
+class Bingo2Main(Widget):
 
     listOfLastBalls= []
 
@@ -68,7 +68,7 @@ class Bingo2App(App):
     cli = mqtt.Client(protocol=mqtt.MQTTv311)
     myApp = Widget()
     def build(self):
-        app=BingoMain()
+        app=Bingo2Main()
         self.myApp=app
         Clock.schedule_interval(app.update, 1)
         return app
